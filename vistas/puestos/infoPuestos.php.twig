@@ -1,0 +1,52 @@
+{% extends "base.php.twig" %}
+{% block contenido %}
+
+	<div class="row">
+		<div class="col">
+			<table class="table">
+				<tr>
+					<td><strong>Ubicación:</strong> </td>
+					<td>{{ datos.ubicacion }}</td>	
+					<td><strong>Planta:</strong> </td>
+					<td>{{ datos.planta }}</td>			
+					<td><strong>Número:</strong> </td>
+					<td>{{ datos.numero }}</td>		
+				</tr>				
+			
+			</table>
+		</div>
+	</div>
+
+	<h3>Stock</h3>
+
+	<div class="row mt-4">
+		<div class="col">
+			<a href="./items/aniadir/{{ datos.idPue }}">Añadir producto</a> |
+			<a href="./puestos">Volver</a>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col">
+
+			<table class="table">
+				<thead>
+					<th>producto</th>
+					<th>stock</th>
+					<th></th>
+					<th></th>
+				</thead>
+				{% for item in stock %}
+					<tr>
+						<td>{{ item.item }}</td>
+						<td>{{ item.stock }}</td>
+						<td><a href="./items/editar/{{ item.idIte }}">Editar</a></td>
+						<td><a href="./items/borrar/{{ item.idIte }}">Borrar</a></td>
+					</tr>
+				{% endfor %}
+
+			</table>
+		</div>
+	</div>
+
+{% endblock %}

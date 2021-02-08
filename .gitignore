@@ -1,0 +1,8 @@
+# Mac System Files
+.DS_store
+
+# Ignore Twig vendor folder
+vendor
+
+# Ignore Composer info
+composer.*

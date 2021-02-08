@@ -1,0 +1,32 @@
+{% extends "base.php.twig" %}
+{% block contenido %}
+
+	<form action="index.php" method="get">
+
+		<input type="hidden" name="cop" value="aniadir" />
+		<input type="hidden" name="con" value="item" />
+		<input type="hidden" name="idp" value="{{ idp }}" />
+
+		<div class="row">
+			<div class="col">
+				<table class="table">
+					<tr>
+						<td><label for="ite">Nombre producto:</label></td>
+						<td><input class="form-control" type="text" name="ite" required /></td>
+						<td><label for="sto">Stock:</label></td>
+						<td><input class="form-control" type="number" name="sto" min="1" /></td>
+					</tr>	
+				</table>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col">
+				<button class="btn btn-primary w-25">Guardar</button>
+				<a href="./puestos/info/{{ idp }}" class="btn btn-danger w-25">Volver</a>
+			</div>
+		</div>
+	</form>
+
+
+{% endblock %}

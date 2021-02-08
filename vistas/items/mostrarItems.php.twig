@@ -1,0 +1,14 @@
+{% extends "base.php.twig" %}
+{% block contenido %}
+
+	<table class="table">
+		{% for item in datos %}
+		<tr>			
+			<td>{{ item.item }}</td>			
+			<td>{{ item.stock }}</td>
+		</tr>	
+		{% endfor %}
+	</table>
+
+
+{% endblock %}

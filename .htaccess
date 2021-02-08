@@ -1,0 +1,8 @@
+RewriteEngine On
+
+RewriteRule ^puestos$					index.php?cop=mostrar&con=Puesto		[L]
+RewriteRule ^puestos/info/([0-9]+)$		index.php?cop=info&con=Puesto&id=$1 	[L]
+
+RewriteRule ^items/([0-9]+)$			index.php?cop=mostrar&con=Item&id=$1	[L]
+RewriteRule ^items/borrar/([0-9]+)$		index.php?cop=borrar&con=Item&id=$1		[L]
+RewriteRule ^items/aniadir/([0-9]+)$	index.php?cop=aniadir&con=Item&id=$1	[L]
